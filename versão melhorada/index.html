@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pokédex Digital</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="pokedex-container">
+
+        <!-- Pokémon decorativos -->
+        <div class="decoracoes">
+
+            <img
+                class="pokemon-decoracao pokemon-1"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png"
+                alt=""
+            >
+
+            <img
+                class="pokemon-decoracao pokemon-2"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png"
+                alt=""
+            >
+
+            <img
+                class="pokemon-decoracao pokemon-3"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png"
+                alt=""
+            >
+
+        </div>
+
+        <header>
+
+            <div class="pokebola-decorativa"></div>
+
+            <h1>Pokédex Digital</h1>
+
+            <p>
+                Pesquise um Pokémon pelo nome ou número
+            </p>
+
+        </header>
+
+        <section class="search-area">
+
+            <input
+                type="text"
+                id="inputPokemon"
+                placeholder="Ex: Pikachu ou 25"
+                aria-label="Nome ou número do Pokémon"
+            >
+
+            <button onclick="buscarPokemon()">
+                Buscar
+            </button>
+
+        </section>
+
+        <p id="mensagemErro" class="oculto">
+            Carregando...
+        </p>
+
+        <!-- Card do Pokémon -->
+        <section id="cardPokemon" class="pokemon-card oculto">
+
+            <img
+                id="imagemPokemon"
+                src=""
+                alt="Imagem do Pokémon"
+            >
+
+            <div class="info">
+
+                <span id="numeroPokemon" class="badge">
+                    #000
+                </span>
+
+                <h2 id="nomePokemon">
+                    Nome
+                </h2>
+
+                <div class="pokemon-details">
+
+                    <p>
+                        <span>Tipo</span>
+
+                        <strong id="tipoPokemon">
+                            ---
+                        </strong>
+                    </p>
+
+                    <p>
+                        <span>Peso</span>
+
+                        <strong>
+                            <span id="pesoPokemon">---</span> kg
+                        </strong>
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <footer>
+
+            <strong>PixelDex Team</strong>
+
+            <span>
+                Projeto acadêmico de desenvolvimento web
+            </span>
+
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
