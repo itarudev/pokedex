@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Pokédex Digital</title>
+    <title>Digital Pokédex</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -14,7 +14,7 @@
 
     <main class="pokedex-container">
 
-        <!-- Pokémon decorativos -->
+        <!-- Decorative Pokémon -->
         <div class="decoracoes">
 
             <img
@@ -41,10 +41,10 @@
 
             <div class="pokebola-decorativa"></div>
 
-            <h1>Pokédex Digital</h1>
+            <h1>Digital Pokédex</h1>
 
             <p>
-                Pesquise um Pokémon pelo nome ou número
+                Search for a Pokémon by name or number
             </p>
 
         </header>
@@ -54,27 +54,27 @@
             <input
                 type="text"
                 id="inputPokemon"
-                placeholder="Ex: Pikachu ou 25"
-                aria-label="Nome ou número do Pokémon"
+                placeholder="Ex: Pikachu or 25"
+                aria-label="Pokémon name or number"
             >
 
             <button onclick="buscarPokemon()">
-                Buscar
+                Search
             </button>
 
         </section>
 
         <p id="mensagemErro" class="oculto">
-            Carregando...
+            Loading...
         </p>
 
-        <!-- Card do Pokémon -->
+        <!-- Pokémon Card -->
         <section id="cardPokemon" class="pokemon-card oculto">
 
             <img
                 id="imagemPokemon"
                 src=""
-                alt="Imagem do Pokémon"
+                alt="Pokémon image"
             >
 
             <div class="info">
@@ -84,13 +84,13 @@
                 </span>
 
                 <h2 id="nomePokemon">
-                    Nome
+                    Name
                 </h2>
 
                 <div class="pokemon-details">
 
                     <p>
-                        <span>Tipo</span>
+                        <span>Type</span>
 
                         <strong id="tipoPokemon">
                             ---
@@ -98,7 +98,7 @@
                     </p>
 
                     <p>
-                        <span>Peso</span>
+                        <span>Weight</span>
 
                         <strong>
                             <span id="pesoPokemon">---</span> kg
@@ -116,7 +116,7 @@
             <strong>PixelDex Team</strong>
 
             <span>
-                Projeto acadêmico de desenvolvimento web
+                Academic web development project
             </span>
 
         </footer>
