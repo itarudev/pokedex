@@ -7,10 +7,10 @@ async function buscarPokemon() {
     const card = document.getElementById("cardPokemon");
     const mensagem = document.getElementById("mensagemErro");
 
-    // Verifica se o campo está vazio
+    // Check if the field is empty
     if (!input) {
         mensagem.textContent =
-            "Digite o nome ou número de um Pokémon.";
+            "Enter a Pokémon name or number.";
 
         mensagem.classList.remove("oculto");
         card.classList.add("oculto");
@@ -18,9 +18,9 @@ async function buscarPokemon() {
         return;
     }
 
-    // Mostra mensagem de carregamento
+    // Show loading message
     mensagem.textContent =
-        "🔎 Procurando Pokémon...";
+        "🔎 Searching for Pokémon...";
 
     mensagem.classList.remove("oculto");
     card.classList.add("oculto");
@@ -31,15 +31,15 @@ async function buscarPokemon() {
             `https://pokeapi.co/api/v2/pokemon/${input}`
         );
 
-        // Verifica se o Pokémon existe
+        // Check if the Pokémon exists
         if (!resposta.ok) {
-            throw new Error("Pokémon não encontrado");
+            throw new Error("Pokémon not found");
         }
 
         const pokemon = await resposta.json();
 
         // =========================
-        // IMAGEM
+        // IMAGE
         // =========================
 
         const imagem =
@@ -49,11 +49,11 @@ async function buscarPokemon() {
             imagem || pokemon.sprites.front_default;
 
         document.getElementById("imagemPokemon").alt =
-            `Imagem do Pokémon ${pokemon.name}`;
+            `Pokémon image ${pokemon.name}`;
 
 
         // =========================
-        // NOME
+        // NAME
         // =========================
 
         const nomeFormatado =
@@ -65,7 +65,7 @@ async function buscarPokemon() {
 
 
         // =========================
-        // NÚMERO
+        // NUMBER
         // =========================
 
         document.getElementById("numeroPokemon").textContent =
@@ -73,28 +73,28 @@ async function buscarPokemon() {
 
 
         // =========================
-        // TIPOS
+        // TYPES
         // =========================
 
         const nomesTipos = {
             normal: "Normal",
-            fire: "Fogo",
-            water: "Água",
-            electric: "Elétrico",
-            grass: "Planta",
-            ice: "Gelo",
-            fighting: "Lutador",
-            poison: "Veneno",
-            ground: "Terrestre",
-            flying: "Voador",
-            psychic: "Psíquico",
-            bug: "Inseto",
-            rock: "Pedra",
-            ghost: "Fantasma",
-            dragon: "Dragão",
-            dark: "Sombrio",
-            steel: "Aço",
-            fairy: "Fada"
+            fire: "Fire",
+            water: "Water",
+            electric: "Electric",
+            grass: "Grass",
+            ice: "Ice",
+            fighting: "Fighting",
+            poison: "Poison",
+            ground: "Ground",
+            flying: "Flying",
+            psychic: "Psychic",
+            bug: "Bug",
+            rock: "Rock",
+            ghost: "Ghost",
+            dragon: "Dragon",
+            dark: "Dark",
+            steel: "Steel",
+            fairy: "Fairy"
         };
 
         const tipos = pokemon.types
@@ -106,7 +106,7 @@ async function buscarPokemon() {
 
 
         // =========================
-        // PESO
+        // WEIGHT
         // =========================
 
         const peso =
@@ -117,7 +117,7 @@ async function buscarPokemon() {
 
 
         // =========================
-        // MOSTRA O RESULTADO
+        // SHOW RESULT
         // =========================
 
         mensagem.classList.add("oculto");
@@ -127,7 +127,7 @@ async function buscarPokemon() {
     } catch (erro) {
 
         mensagem.textContent =
-            "❌ Pokémon não encontrado. Verifique o nome ou número.";
+            "❌ Pokémon not found. Check the name or number.";
 
         mensagem.classList.remove("oculto");
 
@@ -136,7 +136,7 @@ async function buscarPokemon() {
 }
 
 
-// Permite pesquisar pressionando Enter
+// Allows searching by pressing Enter
 
 document
     .getElementById("inputPokemon")
